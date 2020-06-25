@@ -1,0 +1,24 @@
+<!--@subject {{trans "El cliente %customer_name ha solicitado una instalación"  customer_name=$name}} @-->
+<!--@vars {
+"var store.getFrontendName()":"Store Name",
+"var customer.name":"Customer Name",
+"var administrator_name":"Administrator Name"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<p class="greeting"><b>{{trans "Hola administrador"}}</b></p>
+<p>Un cliente ha solicitado una instalación</p>
+<p>Información:</p>
+<br>
+<p>{{trans 'Nombre: %customer_name ' customer_name=$name|row}}</p>
+<p>{{trans 'Correo: %customer_email ' customer_email=$email|row}}</p>
+<p>{{trans 'Teléfono: %customer_phone ' customer_phone=$telephone|row}}</p>
+<p>{{trans 'Servicio: %customer_service ' customer_service=$service|row}}</p>
+<p>{{trans 'Estado: %customer_state ' customer_state=$state|row}}</p>
+<p>{{trans 'Ciudad: %customer_city ' customer_city=$city|row}}</p>
+<p>{{trans 'Comentarios: %customer_comments ' customer_comments=$comment|row}}</p>
+<br>
+
+
+{{template config_path="design/email/footer_template"}}

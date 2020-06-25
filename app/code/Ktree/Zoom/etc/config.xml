@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author KTree Team
+ * @package Ktree_Zoom
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Store/etc/config.xsd">
+    <default>
+        <ktree_zoom>
+            <general>
+                <enable>1</enable>
+                <responsive>1</responsive>
+		<lensSize>100</lensSize>
+		<zoomWindowWidth>400</zoomWindowWidth>
+		<zoomWindowHeight>400</zoomWindowHeight>
+		<borderColour>#888</borderColour>
+		<lensShape>square</lensShape>
+		<zoomType>lens</zoomType>
+		<lensOpacity>0.4</lensOpacity>
+		<tintColour>#333</tintColour>
+		<tintOpacity>0.4</tintOpacity>
+            </general>
+        </ktree_zoom>
+    </default>
+</config>

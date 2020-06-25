@@ -1,0 +1,153 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ? : 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+<?php
+$helper = $this->helper('Hiddentechies\Pixtron\Helper\Data');
+$baseUrl = $helper->getBaseUrl();
+$ishome = $helper->getIsHome();
+$showHome = $helper->getConfigValue('pixtronsettings/navigation_settings/enable');
+$transomHelper = $this->helper('Transom\Tema\Helper\ShopTransomFunctions');
+?>
+
+
+<nav class="navigation" role="navigation">
+    <!-- SLIDER -->
+    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('transom-header-carousel')->toHtml();?>
+    <!-- MENU -->
+    <ul class="menu-movil" data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>     
+       
+        
+        <?php if ($showHome) { ?>
+            <li class = "level0 level-top <?php if ($ishome) { ?> active <?php } ?>">
+                <a class = "level-top" href = "<?php echo $baseUrl; ?>">
+                    <?php echo __('Home');
+                    ?>
+                </a>
+            </li>
+        <?php } ?>
+
+        <?php /* @escapeNotVerified */ echo $_menu; ?>
+
+        <li class="level0 level-top">
+            <a class="level-top" href="<?php echo $baseUrl; ?>servicios-instalacion">
+                <span>Servicios de Instalación</span>
+            </a>
+        </li> 
+            <!-- MI CUENTA -->
+        <li class="level0 level-top">
+            <a class="level-top" href="#">
+                <i class="fa fa-user"></i> Mi Cuenta
+            </a>
+            <ul class = "level0 submenu ui-menu ui-widget ui-widget-content ui-corner-all">
+                <li class = "level1 nav-2-1 category-item first ui-menu-item"><a href="<?php echo $baseUrl; ?>customer/account" class = "ui-corner-all"><span>Mi cuenta</span></a></li>
+                
+                <?php if($transomHelper->isLoggedIn()) : ?>
+                    <li class = "level1 nav-2-2 category-item ui-menu-item"><a href="<?php echo $baseUrl; ?>checkout/cart" class = "ui-corner-all"><span>Mi Carrito</span></a></li>
+                    <li class = "level1 nav-2-3 category-item last ui-menu-item"><a href="<?php echo $baseUrl; ?>customer/account/logout" class = "ui-corner-all"><span>Salir</span></a></li>
+                <?php else: ?>
+                    <li class = "level1 nav-2-2 category-item last ui-menu-item"><a href="<?php echo $baseUrl; ?>checkout/cart" class = "ui-corner-all"><span>Mi Carrito</span></a></li>
+                <?php endif; ?>
+
+                <?php $_loggedin = $this->helper('Magento\Checkout\Helper\Cart')->getCart()->getCustomerSession()->isLoggedIn(); ?>
+
+                <?php if( $_loggedin ) : ?>
+
+                    <li class="header_account_link_list">
+                        <a class= "header_account_link" href="<?php echo $this->getUrl("customer/account/logout");?>"><?php echo __('Cerrar Sesión')?></a>
+                    </li>
+
+                <?php endif; ?>
+            </ul>
+        </li>
+    </ul>
+    <div class="menu-desktop menu-fixed">
+        <ul  data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>     
+            <li class="logo-menu">
+                <a class = "level-top" href = "<?php echo $baseUrl; ?>"><img src="https://shop.transom-group.com/pub/media/v6_logo_shop_transom.png"></a> 
+            </li>
+            <div class="menu-section menu-categories">
+            <?php if ($showHome) { ?>
+                <li class = "level0 level-top <?php if ($ishome) { ?> active <?php } ?>">
+                    <a class = "level-top" href = "<?php echo $baseUrl; ?>">
+                        <?php echo __('Home');
+                        ?>
+                    </a>
+                </li>
+            <?php } ?>
+
+            <?php /* @escapeNotVerified */ echo $_menu; ?>
+
+            <li class="level0 level-top">
+                <a class="level-top" href="<?php echo $baseUrl; ?>servicios-instalacion">
+                    <span>Servicios de Instalación</span>
+                </a>
+            </li>
+            </div>
+            <div class="menu-section my-account">    
+                <!-- MI CUENTA -->
+                <li class="level0 level-top">
+                    <a class="level-top" href="#">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <ul class = "level0 submenu ui-menu ui-widget ui-widget-content ui-corner-all">
+                        <li class = "level1 nav-2-1 category-item first ui-menu-item"><a href="<?php echo $baseUrl; ?>customer/account" class = "ui-corner-all"><span>Mi cuenta</span></a></li>
+                        
+                        <?php if($transomHelper->isLoggedIn()) : ?>
+                            <li class = "level1 nav-2-2 category-item ui-menu-item"><a href="<?php echo $baseUrl; ?>checkout/cart" class = "ui-corner-all"><span>Mi Carrito</span></a></li>
+                            <li class = "level1 nav-2-3 category-item last ui-menu-item"><a href="<?php echo $baseUrl; ?>customer/account/logout" class = "ui-corner-all"><span>Salir</span></a></li>
+                        <?php else: ?>
+                            <li class = "level1 nav-2-2 category-item last ui-menu-item"><a href="<?php echo $baseUrl; ?>checkout/cart" class = "ui-corner-all"><span>Mi Carrito</span></a></li>
+                        <?php endif; ?>
+
+                        <?php $_loggedin = $this->helper('Magento\Checkout\Helper\Cart')->getCart()->getCustomerSession()->isLoggedIn(); ?>
+
+                        <?php if( $_loggedin ) : ?>
+
+                            <li class="header_account_link_list">
+                                <a class= "header_account_link" href="<?php echo $this->getUrl("customer/account/logout");?>"><?php echo __('Cerrar Sesión')?></a>
+                            </li>
+
+                        <?php endif; ?>
+                    </ul>
+                </li>
+                <li class="level0 level-top">
+                    <?php echo $this->getChildHtml('minicart') ?>
+                </li>
+            </div>
+        </ul>
+    </div>
+
+    <!--BARRA DE BÚSQUEDA -->
+    <?php echo $this->getLayout()->createBlock("Magento\Framework\View\Element\Template")->setTemplate("Magento_Search::form.mini.phtml")->toHtml(); ?>
+</nav>
+
+
+<script type="text/javascript">
+    require(['jquery'], function($) {
+        $(document).ready(function() {
+            var altura = $('.menu-fixed').offset().top;
+        
+            $(window).on('scroll', function() {
+                if ( $(window).scrollTop() > altura ) {
+                    $('.menu-fixed').addClass('fixed');
+                } else {
+                    $('.menu-fixed').removeClass('fixed');
+                }
+            });
+            
+        });    
+    });
+</script>

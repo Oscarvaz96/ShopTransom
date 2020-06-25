@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Ktree Team
+ * @copyright Copyright (c) 2015 Ktree (http://www.ktree.com)
+ * @package Ktree_Zoom
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="ktree" translate="label" sortOrder="10">
+            <label>KTree</label>
+        </tab>
+        <section id="ktree_zoom" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>KTree Zoom</label>
+            <tab>ktree</tab>
+            <resource>Ktree_Zoom::ktree_zoom</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>General</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Enable Zoom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="zoomType" translate="label" type="select" sortOrder="2" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Type Of Zoom</label>
+		<source_model>Ktree\Zoom\Model\Config\Zoomtype</source_model>
+                </field>
+                <field id="responsive" translate="label" type="select" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Responsive</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+		<field id="lensShape" translate="label" type="select" sortOrder="4" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Lense Shape</label>
+                    <source_model>Ktree\Zoom\Model\Config\Lensshape</source_model>
+                </field>
+	
+			<field id="lensOpacity" translate="label" type="text" sortOrder="5" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Lens Opacity %</label>
+                </field>
+				<field id="lensSize" translate="label" type="text" sortOrder="6" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Lens Size</label>
+                </field>
+<field id="zoomWindowWidth" translate="label" type="text" sortOrder="7" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Zoom Width</label>
+                </field>
+
+				<field id="zoomWindowHeight" translate="label" type="text" sortOrder="8" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Zoom Height</label>
+                </field>
+				<field id="tintColour" translate="label" type="text" sortOrder="9" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Tinit Colour</label>
+                </field>
+<field id="tint" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Tint</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+<field id="borderColour" translate="label" type="text" sortOrder="12" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Border Colour</label>
+                </field>
+				<field id="tintOpacity" translate="label" type="text" sortOrder="11" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Tint Opacity %</label>
+				</field>
+<field id="scrollZoom" translate="label" type="select" sortOrder="13" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Scroll Zoom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

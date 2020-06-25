@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.main.title" destination="content" before="-"/>
+		
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="category.product.addto.compare" remove="true" />
+         <referenceBlock name="view.addto.compare" remove="true"/>
+        <referenceBlock name="related.product.addto.compare" remove="true"/>
+		
+		 <!--
+		 <block class="Magento\Customer\Block\Account\Link" name="register-link">
+					<arguments>
+						<argument name="label" xsi:type="string" >Create an account</argument>
+					</arguments>
+		</block>
+		 -->
+		
+		
+      
+        <referenceBlock name="top.links">
+			
+				
+       
+		 
+      
+			<!-- CART top link -->
+		 
+            <!--
+			<block class="\Magento\Framework\View\Element\Html\Link" name="fatima-myaccount" after="register-link">
+
+				<arguments>
+
+					<argument name="label" xsi:type="string" >My Account</argument>
+                    <argument name="path" xsi:type="string">customer/account/login</argument>
+
+				</arguments>
+
+			</block>
+			
+			  
+			
+			<block class="Magento\Framework\View\Element\Html\Link" name="fatima-top-cart" after = "fatima-myaccount" >
+                <arguments>
+                    <argument name="label" xsi:type="string" >Cart</argument>
+                    <argument name="path" xsi:type="string">checkout/cart/</argument>
+					
+                </arguments>
+            </block>
+			
+			
+			-->
+			
+			
+			<!-- Contact US top link -->
+			<!--
+	
+            <block class="Magento\Framework\View\Element\Html\Link" name="fatima-top-contactus" before = "fatima-top-cart">
+                <arguments>
+                    <argument name="label" xsi:type="string">Contact Us</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                </arguments>
+            </block>
+			-->
+			 <!--WELCOME TOP LINK MESSAGE -->
+			
+		
+			
+        </referenceBlock> 
+		
+		    
+		<!--   <move element="my-account-link" destination="top.links" after = "fatima-top-cart"/> -->
+		  <!--  <move element="minicart" destination="top.links" before = "fatima-top-cart"/> -->
+		 <!-- <referenceBlock name="authorization-link" remove="true" /> -->
+		<!--        <referenceBlock name="my-account-link" remove="true" /> -->
+		
+		
+      </body>
+</page>
+

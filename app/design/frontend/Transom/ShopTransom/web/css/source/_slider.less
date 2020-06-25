@@ -1,0 +1,125 @@
+#carouselDesktop.carousel {
+    display: none!important;
+}
+.cms-index-index #carouselDesktop.carousel {
+    align-items: center;
+    display: flex!important;
+    height: 100vh;
+    justify-content: center;
+    max-height: 980px;
+    min-height: 500px; 
+    overflow: hidden;
+    position: relative;
+}
+.carousel-inner, 
+.carousel-item  {
+    height: 100%;
+}
+#carouselDesktop.carousel > .carousel-inner > .carousel-item {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 980px;
+    min-height: 500px; 
+}
+#carouselDesktop .carousel-caption {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex!important;
+    height: 100%;
+    justify-content: center;
+    position: initial;
+}
+.carousel-item.active, .carousel-item-next, .carousel-item-prev {
+    display: block;
+    transition: -webkit-transform 0.9s ease;
+    transition: transform 0.9s ease;
+    transition: transform 0.9s ease, -webkit-transform 0.9s ease;
+}
+.carousel-item-1 {
+    background-image: url(https://shop.transom-group.com/pub/media/component-min_2.jpg);
+}
+.carousel-item-2 {
+    background-image: url(https://shop.transom-group.com/pub/media/slide2.jpg);
+}
+.carousel-item-3 {
+    background-image: url(https://shop.transom-group.com/pub/media/slide3.jpeg);
+}
+.carousel-item-4 {
+    background-image: url(https://shop.transom-group.com/pub/media/slide4.jpg);
+}
+
+
+@media (max-width: 767px) {
+    .cms-index-index .navigation #carouselDesktop.carousel,
+    .navigation .block-search {
+        display: none!important;
+    }
+}
+@media (min-width: 768px) {
+    .slider-movil .home-slider-wrapper {
+        display: none!important;
+    }
+}
+
+.img-shadow {
+    box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+        -webkit-box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+        -moz-box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+        -ms-box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+        -o-box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+}
+.text-banner{
+    color: #ffffff !important;
+    text-shadow: 0 0.1em 0.8rem rgba(0, 0, 0, 0.25);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+@media (min-width: 768px) {
+    .text-banner {
+        font-size: 5vw;
+    }
+}
+.btn-grad {
+    display: inline-block;
+    font-weight: 600;
+    color: #fff !important;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem 3rem;
+    font-size: 20px;
+    line-height: 2;
+    border-radius: .25rem;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #114d5e 0%, #114d5e 51%, #ead54e 99%);
+    border-left: 1px solid #114d5e;
+    -webkit-box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+        -moz-box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+        -ms-box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+        -o-box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+    box-shadow: 12px 15px 36px 0px rgba(0,0,0,0.46);
+}
+.btn-grad:hover { 
+    background-position: right center; 
+    color: #fff!important;
+}
+
+.carousel-fade .carousel-item {
+    transition: all 2s ease-out;
+   }
+   

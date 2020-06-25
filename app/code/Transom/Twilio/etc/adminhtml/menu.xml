@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add id="Transom_Twilio::twilio" title="Twilio" translate="title" module="Transom_Twilio" parent="Magento_Backend::content" sortOrder="50" dependsOnModule="Transom_Twilio" resource="Transom_Twilio::twilio"/>
+      <add id="Transom_Twilio::twilio_helloworld" title="Configuración" translate="title" module="Transom_Twilio" parent="Transom_Twilio::twilio" sortOrder="10" dependsOnModule="Transom_Twilio" action="twilio/helloworld" resource="Transom_Twilio::twilio"/>
+    </menu>
+</config>

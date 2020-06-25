@@ -1,0 +1,14 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<?= $block->escapeHtml(__(
+    'Agregaste %1 a tu <a href="%2">carrito de compras</a>.',
+    $block->getData('product_name'),
+    $block->getData('cart_url')
+), ['a']);

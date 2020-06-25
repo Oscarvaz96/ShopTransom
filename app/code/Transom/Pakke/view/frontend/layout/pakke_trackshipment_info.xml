@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+  <head>
+    <css src="Transom_Pakke::bootstrap.css"/>
+    <css src="bootstrap.css" />
+  </head>
+
+    <referenceContainer name="content">
+        <block class="Transom\Pakke\Block\TrackInfo\TrackingInfo" name="tracking_info" template="Transom_Pakke::track_info.phtml"/>
+        <!--Magento\Framework\View\Element\Template-->
+    </referenceContainer>
+</page>

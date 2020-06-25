@@ -1,0 +1,102 @@
+.minicart-wrapper {
+    margin-top: 0!important;
+    float: initial!important;
+    margin-left: initial;
+}
+.minicart-wrapper .action.showcart,
+.minicart-wrapper .action.showcart:before  {
+    line-height: 20px !important;
+}
+.minicart-wrapper .action.showcart.active:hover:before,
+.minicart-wrapper .action.showcart.active:active:before,
+.minicart-wrapper .action.showcart:active:before,
+.minicart-wrapper .action.showcart:hover:before {
+    color: #fff !important;
+}
+
+.minicart-wrapper .action.showcart .counter.qty {
+    background: #ead54e;
+    color: #114d5e;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0;
+    min-width: 20px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    white-space: normal;
+    vertical-align: top;
+    font-size: 10px;
+    font-weight: 700;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+@media (max-width: 767px) {
+    .minicart-wrapper .action.showcart .counter.qty {
+        right: -18px;
+        top: 7px;
+    }
+}
+.minicart-wrapper .action.showcart.active:before {
+    content: "\f07a";
+    color: #fff!important;
+    font-size: 20px;
+    font-family: "Fontawesome";
+    line-height: 20px;
+}
+@media (min-width: 768px){
+.minicart-wrapper .action.showcart.active::before {
+    line-height: 20px!important;
+}
+}
+.minicart-wrapper .block-minicart {
+    right: 12px;
+    top: 52px !important;
+    padding: 42px 18px 10px 28px;
+
+}
+.minicart-wrapper .block-minicart:before {
+    left: auto;
+    right: 0px;
+}
+.minicart-wrapper .block-minicart:after {
+    left: auto;
+    right: -1px;
+}
+@media only screen and (max-width: 767px){
+    .minicart-wrapper .action.showcart:before {
+        content: "\f07a";
+        color: #fff;
+        font-size: 1.6rem;
+        font-family: "Fontawesome";
+    }
+}
+.page-header .header.panel {
+    display: none;
+}
+
+.minicart-items .product-item-pricing .label {
+    display: inline-block;
+    width: auto;
+}
+.minicart-wrapper .product .actions {
+    margin: -30px 0 0;
+}
+.minicart-items .update-cart-item {
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+.minicart-items .product-image-container {
+    display: inline-block;
+    max-width: 100%;
+    width: 60px!important;
+}
+.minicart-items .product-item-details {
+    padding-left: 60px;
+}
+.minicart-items .update-cart-item {
+    margin-right: 40px;
+}
